@@ -1,6 +1,6 @@
 {
   "name": "Human-pose-estimation",
   "tagline": "",
-  "body": "# dataset description  \r\n\r\n***\r\nour dataset(K2) is composed about 10K depth images captured by kinect2\r\n",
+  "body": "# dataset description  \r\n***\r\nour dataset(K2) is composed about 10K depth images captured by kinect2. We transformed the depth value of the image to 0~255.K2 contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual posed and occluded-poses.It contains about XX train images and XX test images.  \r\n\r\n***\r\n\r\n#dataset details",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
