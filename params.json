@@ -1,6 +1,6 @@
 {
   "name": "Human-pose-estimation",
   "tagline": "",
-  "body": "![dfd](dilate.jpg)",
+  "body": "# dataset description  \r\nour dataset(K2) is composed about 10K depth images captured by kinect2",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
