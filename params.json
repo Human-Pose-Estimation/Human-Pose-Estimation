@@ -1,6 +1,6 @@
 {
   "name": "Human-pose-estimation",
   "tagline": "",
-  "body": "# dataset description  \r\n> our dataset(K2) is composed about 10K depth images captured by kinect2",
+  "body": "# dataset description  \r\n\r\n***\r\nour dataset(K2) is composed about 10K depth images captured by kinect2\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
