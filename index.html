@@ -19,10 +19,9 @@
       <h1>
 <a id="dataset-description" class="anchor" href="#dataset-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Description</h1>
 
-<p>Our kinect2 human gesture dataset(K2HGD) is composed about 100K depth images captured by kinect2. We transformed the depth value of the image to 0~255.K2HGD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses.We used 60K for traning and 40K for testing in our paper <em><strong>Human Pose Estimation from Depth Data via Inference Embedded Multitask Learning</strong></em> </p>
+<p>Our kinect2 human gesture dataset(K2HGD) is composed about 100K depth images captured by kinect2. We transformed the depth value of the image to 0~255.K2HGD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses. We offered the accurate groundtruth and we will tell you how we obtained the accurate groundtruth later </p>
 
-<p>The K2HGD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion.When using kinect2 depth images for our model, we find that images captured by kinect2 is better for both accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
-<img src="testimagesdemo/show.png" alt="the java tool for adjustment"></p>
+
 
 <h1>
 <a id="dataset-details" class="anchor" href="#dataset-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Details</h1>
@@ -96,6 +95,9 @@ Besides, We captured many unusual gestures and images with self-occlusion for th
 <tr><td><img src="datasetskeleton/00094126.png " style="width:200px"/>  </td><td><img src="" style="width:200px"/></td></tr>
 </table>
 </p>
+
+<p>The K2HGD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
+<img src="testimagesdemo/show.png" alt="the java tool for adjustment"></p>
 
 <p>for more details of our dataset, you can download our dataset.We split the dataset to 2 parts: the first one is mainly normal gestures and some unusual and self-occlusion, and the second includes many unusual poses and self-occlusion. When training and tesing using our dataset, you should use both the first and the second to get better results.  </p>
 
