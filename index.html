@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Human-pose-estimation</h1>
+      <h1 class="project-name">Human Pose Estimation From Single Image</h1>
       <h2 class="project-tagline"></h2>
     </section>
 
@@ -21,26 +21,29 @@
 <p>Below we will show some pictures of our dataset, but for more details of our dataset, you can download our part dataset demos or the full dataset.We split the full dataset to 2 parts: the first one is mainly normal gestures and some unusual and self-occlusion, and the second includes many unusual poses and self-occlusion. When training and tesing using our dataset, you should use both the first and the second to get better results.  </p>
 
 <p> the part dataset demos:
-[<a href="demoimages.zip">part demos</a>] </p>
+[<a href="demoimages.zip">Demos</a>] </p>
 <p>The first part full dataset:
 [<a href="http://pan.baidu.com/s/1mitRWjI">Part1 Dataset</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">part1 groundtruth</a>]  </p>
 
 <p>The second part full dataset:
 [<a href="http://pan.baidu.com/s/1bpeBofl">Part2 Dataset</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">part2 groundtruth</a>] </p>
-<p>you can also use our part  groundtruth files . we split these files to 5 average parts and you can use them partly in ways such as K-fold cross-validation
+<p>you can also use our part groundtruth files . we split these files to 5 average parts and you can use them partly in ways such as K-fold cross-validation.For example, you can use
+the first 4 part as the train images and the last part as the test images.
 <blockquote>
-<p>1.[<a href="groundtruthfiles/depthpart1.txt">subfile1</a>]<br>
-2.[<a href="groundtruthfiles/depthpart2.txt">subfile2</a>]<br>
-3.[<a href="groundtruthfiles/depthpart3.txt">subfile3</a>]<br>
-4.[<a href="groundtruthfiles/depthpart4.txt">subfile4</a>]<br>  
-5.[<a href="groundtruthfiles/depthpart5.txt">subfile5</a>]<br>  
+<p>1.[<a href="groundtruthfiles/depthpart1.txt">Partion1</a>]<br>
+2.[<a href="groundtruthfiles/depthpart2.txt">Partion2</a>]<br>
+3.[<a href="groundtruthfiles/depthpart3.txt">Partion3</a>]<br>
+4.[<a href="groundtruthfiles/depthpart4.txt">Partion4</a>]<br>  
+5.[<a href="groundtruthfiles/depthpart5.txt">Partion5</a>]<br>  
 </p>
 </blockquote>
 
 <p>you can use our dataset to generate other groundtruth format such as heat-map, which describs the likeli-hood of a joint occurring in each spatial location.
 More mathetically, It maps the location to a image that the value of this location is high. This will be beneficial for image
-framework such as CNN</p>
-<img src="datasetskeleton/1.png" >
+framework such as CNN  
+<img src="groundtruthfiles/1(1).png" >
+</p>
+
 
 
 <h1>
