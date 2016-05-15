@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Human Pose Estimation From Single Image</h1>
+      <h1 class="project-name">Kinect2 Human Gesture Dataset(K2HGD)</h1>
       <h2 class="project-tagline"></h2>
     </section>
 
@@ -23,18 +23,18 @@
 <p> the part dataset demos:
 [<a href="demoimages.zip">Demos</a>] </p>
 <p>The first part full dataset:
-[<a href="http://pan.baidu.com/s/1mitRWjI">Part1 Dataset</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">part1 groundtruth</a>]  </p>
+[<a href="http://pan.baidu.com/s/1mitRWjI">K2HGD-1</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">part1 groundtruth</a>]  </p>
 
 <p>The second part full dataset:
-[<a href="http://pan.baidu.com/s/1bpeBofl">Part2 Dataset</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">part2 groundtruth</a>] </p>
+[<a href="http://pan.baidu.com/s/1bpeBofl">K2HGD-2</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">part2 groundtruth</a>] </p>
 <p>you can also use our part groundtruth files . we split these files to 5 average parts and you can use them partly in ways such as K-fold cross-validation.For example, you can use
 the first 4 part as the train images and the last part as the test images.
 <blockquote>
-<p>1.[<a href="groundtruthfiles/depthpart1.txt">Partion1</a>]<br>
-2.[<a href="groundtruthfiles/depthpart2.txt">Partion2</a>]<br>
-3.[<a href="groundtruthfiles/depthpart3.txt">Partion3</a>]<br>
-4.[<a href="groundtruthfiles/depthpart4.txt">Partion4</a>]<br>  
-5.[<a href="groundtruthfiles/depthpart5.txt">Partion5</a>]<br>  
+<p>1.[<a href="groundtruthfiles/depthpart1.txt">Partition1</a>]<br>
+2.[<a href="groundtruthfiles/depthpart2.txt">Partition2</a>]<br>
+3.[<a href="groundtruthfiles/depthpart3.txt">Partition3</a>]<br>
+4.[<a href="groundtruthfiles/depthpart4.txt">Partition4</a>]<br>  
+5.[<a href="groundtruthfiles/depthpart5.txt">Partition5</a>]<br>  
 </p>
 </blockquote>
 
@@ -79,33 +79,9 @@ We transformed the depth value of the image to 0~255.K2HGD contains many differe
 <a id="dataset-details" class="anchor" href="#dataset-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Details</h1>
 
 <p>The dataset contains depth images captured by kinect2 with different people(boys and girls,about 30), different height,different distances and different challenging sceness(from simple scenes with only white wall to very challenging scenes which include many normal objects such as chairs). The dataset is aimed at detecting human gestures, so many depthimages are human usual life gestures.
-Besides, We captured many unusual gestures and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. the gestures our dataset contains has the following class(far more than that, We only show some standard of them because many gesture is combination of many gestures or you can't say clearly what class the belong):  </p>
+Besides, We captured many unusual gestures and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. You can see the appendix to know the gestures our dataset  </p>
 
-<blockquote>
-<p>1.Calling phone<br>
-2.Drinking water<br>
-3.Playing Tai Chi<br>
-4.Walking around<br>
-5.Giving a strecth<br>
-6.Picking up something<br>
-7.Driving car<br>
-8.Wiping the glass<br>
-9.Playing Basketball<br>
-10.Puting on/Taking off spectacles<br>
-11.setting-up exercises to music<br>
-12.Sqatting down and stand up<br>
-13.Many different normal jump actions<br>
-14.Walking around and reading books<br>
-15.Swing like birds<br>
-16.Punching Attack<br>
-17.Turning around<br>
-18.Walking closer and far away<br>
-19.Sitting in a chiar and turn around<br>
-20.Other normal upper body movements(waving hands, Folding one's arms and so on)<br>
-21.Other normal lower body movements(Kicking, Crossing legs and so on)<br>
-22.unusual poses(bending with unusual angles,Serious occluson ,judo actions and so on)<br>
-23.Poses with self-occlusion  (turning around,many body-occlusion actions , sitting behind objects and so on) </p>
-</blockquote>
+
 
 <p>The following is some examples of our dataset:
 <!--<img src="datasetskeleton/00002550.png" alt="",style="left:50x;top:50px">-->
@@ -160,7 +136,34 @@ Besides, We captured many unusual gestures and images with self-occlusion for th
 <p>The K2HGD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
 <img src="testimagesdemo/show.png" alt="the java tool for adjustment"></p>
 
-
+<h1>
+<a id="appendix" class="anchor" href="#dataset-appendix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Appendix</h1>
+<p>Our dataset contains the following class:(far more than that, We only show some standard of them because many gesture is combination of many gestures or you can't say clearly what class the belong): </p>
+<blockquote>
+<p>1.Calling phone<br>
+2.Drinking water<br>
+3.Playing Tai Chi<br>
+4.Walking around<br>
+5.Giving a strecth<br>
+6.Picking up something<br>
+7.Driving car<br>
+8.Wiping the glass<br>
+9.Playing Basketball<br>
+10.Puting on/Taking off spectacles<br>
+11.setting-up exercises to music<br>
+12.Sqatting down and stand up<br>
+13.Many different normal jump actions<br>
+14.Walking around and reading books<br>
+15.Swing like birds<br>
+16.Punching Attack<br>
+17.Turning around<br>
+18.Walking closer and far away<br>
+19.Sitting in a chiar and turn around<br>
+20.Other normal upper body movements(waving hands, Folding one's arms and so on)<br>
+21.Other normal lower body movements(Kicking, Crossing legs and so on)<br>
+22.unusual poses(bending with unusual angles,Serious occluson ,judo actions and so on)<br>
+23.Poses with self-occlusion  (turning around,many body-occlusion actions , sitting behind objects and so on) </p>
+</blockquote>
 
 
     </section>
