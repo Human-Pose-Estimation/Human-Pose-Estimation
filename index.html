@@ -11,22 +11,22 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Kinect2 Human Gesture Dataset(K2HGD)</h1>
+      <h1 class="project-name">Kinect2 Human Pose Dataset(K2HPD)</h1>
       <h2 class="project-tagline"></h2>
     </section>
 
     <section class="main-content">
 <h1>
 <a id="dataset-download" class="anchor" href="#dataset-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Download</h1>
-<p>Below we will show some pictures of our dataset, but for more details of our dataset, you can download our part dataset demos or the full dataset.We split the full dataset to 2 parts: the first one is mainly normal gestures and some unusual and self-occlusion, and the second includes many unusual poses and self-occlusion. When training and tesing using our dataset, you should use both the first and the second to get better results.  </p>
+<p>Below we will show some pictures of our dataset, but for more details of our dataset, you can download our part dataset demos or the full dataset.We split the full dataset to 2 parts: the first one is mainly normal poses and some unusual and self-occlusion, and the second includes many unusual poses and self-occlusion. When training and tesing using our dataset, you should use both the first and the second to get better results.  </p>
 
 <p> the part dataset demos:
 [<a href="demoimages.zip">Demos</a>] </p>
 <p>The first part  dataset:
-[<a href="http://pan.baidu.com/s/1mitRWjI">K2HGD-1</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">part1 groundtruth</a>]  </p>
+[<a href="http://pan.baidu.com/s/1mitRWjI">K2HPD-1</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">K2HPD-1 groundtruth</a>]  </p>
 
 <p>The second part dataset:
-[<a href="http://pan.baidu.com/s/1bpeBofl">K2HGD-2</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">part2 groundtruth</a>] </p>
+[<a href="http://pan.baidu.com/s/1bpeBofl">K2HPD-2</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">K2HPD-2 groundtruth</a>] </p>
 <p>you can also use our part groundtruth files . we split these files to 5 average parts and you can use them partly in ways such as K-fold cross-validation.For example, you can use
 the first 4 part as the train images and the last part as the test images.
 <blockquote>
@@ -49,7 +49,7 @@ framework such as CNN
 <h1>
 <a id="dataset-description" class="anchor" href="#dataset-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Description</h1>
 
-<p>Our kinect2 human gesture dataset(K2HGD) is composed about 100K depth images captured by kinect2 with resolution 512 x 424. We have 19 parts of human body and the order is :
+<p>Our kinect2 human pose dataset(K2HPD) is composed about 100K depth images captured by kinect2 with resolution 512 x 424. We have 19 parts of human body and the order is :
 <blockquote>
 <p>1.Head<br>
 2. Neck<br>
@@ -81,7 +81,7 @@ framework such as CNN
   <a id="dataset-detail" class="anchor" href="#dataset-detail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
 </h1>  
 <p>
-We transformed the depth value of the image to 0~255.K2HGD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses. We offered the accurate groundtruth and we will tell you how we obtained the accurate groundtruth later 
+We transformed the depth value of the image to 0~255.K2HPD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses. We offered the accurate groundtruth and we will tell you how we obtained the accurate groundtruth later 
 </p>
 
 
@@ -89,8 +89,8 @@ We transformed the depth value of the image to 0~255.K2HGD contains many differe
 <h1>
 <a id="dataset-details" class="anchor" href="#dataset-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Details</h1>
 
-<p>The dataset contains depth images captured by kinect2 with different people(boys and girls,about 30), different height,different distances and different challenging sceness(from simple scenes with only white wall to very challenging scenes which include many normal objects such as chairs). The dataset is aimed at detecting human gestures, so many depthimages are human usual life gestures.
-Besides, We captured many unusual gestures and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. You can see the appendix to know the gestures our dataset  </p>
+<p>The dataset contains depth images captured by kinect2 with different people(boys and girls,about 30), different height,different distances and different challenging sceness(from simple scenes with only white wall to very challenging scenes which include many normal objects such as chairs). The dataset is aimed at detecting human poses, so many depthimages are human usual life poses.
+Besides, We captured many unusual poses and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. You can see the appendix to know the poses our dataset  </p>
 
 
 
@@ -144,12 +144,12 @@ Besides, We captured many unusual gestures and images with self-occlusion for th
 </table>
 </p>
 
-<p>The K2HGD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
+<p>The K2HPD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
 <img src="testimagesdemo/show.png" alt="the java tool for adjustment"></p>
 
 <h1>
 <a id="appendix" class="anchor" href="#dataset-appendix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Appendix</h1>
-<p>Our dataset contains the following class:(far more than that, We only show some standard of them because many gesture is combination of many gestures or you can't say clearly what class the belong): </p>
+<p>Our dataset contains the following class:(far more than that, We only show some standard of them because many pose is combination of many poses or you can't say clearly what class the belong): </p>
 <blockquote>
 <p>1.Calling phone<br>
 2.Drinking water<br>
