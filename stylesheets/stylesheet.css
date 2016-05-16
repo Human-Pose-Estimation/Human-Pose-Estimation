@@ -73,7 +73,7 @@ a {
 
 .project-name {
   margin-top: 0;
-  margin-bottom: 0.1rem; }
+  margin-bottom: 0.01rem; }
 
 @media screen and (min-width: 32em) {
   .project-name {
@@ -88,7 +88,7 @@ a {
     font-size: 1.75rem; } }
 
 .project-tagline {
-  margin-bottom: 2rem;
+  margin-bottom: 0.02rem;
   font-weight: normal;
   opacity: 0.7; }
 
