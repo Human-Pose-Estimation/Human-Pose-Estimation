@@ -16,23 +16,36 @@
     </section>
 
     <section class="main-content">
-<img src="dataset.png"></img>
+<p align="center"><img src="dataset.png"></img></p>
+<p align="justify">Figure 2: Human pose examples from the K2HPD dataset.</p>
 <h1><a id="dataset-download" class="anchor" href="#dataset-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Download</h1>
 <table>
 <tr>
 <td align="center">
 Demo images: [<a href="demoimages.zip">Demos</a>]
 </td>
-<td>
-The whole dataset images: [<a href="http://pan.baidu.com/s/1mitRWjI">K2HPD 1</a>], [<a href="http://pan.baidu.com/s/1bpeBofl">K2HPD 2</a>]
+<td align="center">
+The whole dataset images: [<a href="http://pan.baidu.com/s/1mitRWjI">K2HPD</a>]
 </td>
-<td>
-The groundtruth files: [<a href="groundtruthfiles/depth.txt">groundtruth 1</a>] [<a href="groundtruthfiles/depth2.txt">groundtruth 2</a>]
+<td align="center">
+The groundtruth files: [<a href="groundtruthfiles/depth.txt">groundtruth</a>]
 </td>
 </tr>
 </table>
 
-<h1>Training and Testing Partition</h1>
+<h1>Description</h1>
+<p align="center"><img src="DatasetDemo.png"></img></p>
+<p align="justify">Figure 2: Human pose examples from the K2HPD dataset.</p>
+<br />
+
+<p>
+The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth images with various human poses under challenging scenarios. These detph images are captured by the kinect2 with the reolution 512x424. As illustrated in Fig. 2, this dataset consists of 19 body joints (see Fig. 3 for more details) of 30 subjects under ten different challenging scenes. The subject is asked to perform both normal daily poses and unusal poses. The human body joints are defined as follows: Head, Neck, UpperSpine, MiddleSpine, DownSpine, RightShoulder, RightElbow, RightWrist, RightHand, LeftShoulder,  LightElbow, LeftWrist, LeftHand, RightHip, RightKnee, RightFoot, LeftHip, LeftKnee, LeftFoot.
+</p>
+
+<p align="center"><img src="groundtruthfiles/mm4.png" height=100px></img></p>
+<p align="justify">Figure 2: Human pose examples from the K2HPD dataset.</p>
+
+<h2>Training and Testing Partition</h2>
 To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fold cross-validation.
 <blockquote>
 <p>
@@ -44,17 +57,8 @@ To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fo
 </p>
 </blockquote>
 
-<img src="DatasetDemo.png"></img>
-<h2>Description</h2>
-The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth images with various human poses under challenging scenarios. These detph images are captured by the kinect2 with the reolution 512x424. 
-
-
-As illustrated in Fig. 2, this dataset consists of 19 body joints (see Fig. 3 for more details) of 30 subjects under ten different challenging scenes. The subject is asked to perform both normal daily poses and unusal poses. The human body joints are defined as follows: Head, Neck, UpperSpine, MiddleSpine, DownSpine, RightShoulder, RightElbow, RightWrist, RightHand, LeftShoulder,  LightElbow, LeftWrist, LeftHand, RightHip, RightKnee, RightFoot, LeftHip, LeftKnee, LeftFoot.
-
 <img src="heat-map.png"></img>
-<p> you can use our dataset to generate other groundtruth format such as heat-map, which describs the likeli-hood of a joint occurring in each spatial location.
-More mathetically, It maps the location to a image that the value of this location is high. This will be beneficial for image
-framework such as CNN  
+<p> you can use our dataset to generate other groundtruth format such as heat-map, which describs the likeli-hood of a joint occurring in each spatial location. Specially, it maps the location to a image that the value of this location is high. This will be beneficial for image framework such as CNN.
 <img src="groundtruthfiles/mm8.png" >
 </p>
 
@@ -68,7 +72,7 @@ framework such as CNN
 
 
 <p>the picture shows the skeleton<br>
-<img src="groundtruthfiles/mm4.png"></p>  
+
 
 
 <h1>
