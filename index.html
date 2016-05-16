@@ -16,8 +16,8 @@
     </section>
 
     <section class="main-content">
-<p align="center"><img src="dataset.png"></img></p>
-<p align="center">Figure 1: Kinect2 Human Pose Dataset(K2HPD).</p>
+<p align="center"><img src="dataset.png" width=80%></img></p>
+<p align="center">Figure 1: Kinect2 Human Pose Dataset (K2HPD).</p>
 <h1><a id="dataset-download" class="anchor" href="#dataset-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Download</h1>
 <table>
 <tr>
@@ -35,7 +35,7 @@ The groundtruth files: [<a href="groundtruthfiles/depth.txt">groundtruth</a>]
 
 <h1><a id="dataset-description" class="anchor" href="#dataset-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Description</h1>
 <p align="center"><img src="DatasetDemo.png"></img></p>
-<p align="center">Figure 3: Human pose examples from the K2HPD dataset.</p>
+<p align="center">Figure 2: Human pose examples from the K2HPD dataset.</p>
 <br />
 
 <p>
@@ -43,7 +43,7 @@ The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth
 </p>
 
 <p align="center"><img src="groundtruthfiles/mm4.png" height=200px></img></p>
-<p align="justify">Figure 3: the illustration of the annotated human body joints.</p>
+<p align="justify">Figure 3: The illustration of the annotated human body joints.</p>
 
 <h2>Training and Testing Partition</h2>
 To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fold cross-validation.
@@ -68,7 +68,9 @@ To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fo
 Besides, We captured many unusual poses and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. You can see the appendix to know the poses our dataset  </p>
 
 <p>The K2HPD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
-<img src="testimagesdemo/show.png" width=50% alt="the java tool for adjustment"></p>
+
+<p align="center"><img src="testimagesdemo/show.png" height=200px></img></p>
+<p align="justify">Figure 4: The illustration of the labeling tools.</p>
 
 <h1>
 <a id="appendix" class="anchor" href="#dataset-appendix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Appendix</h1>
