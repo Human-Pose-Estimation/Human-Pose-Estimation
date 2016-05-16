@@ -33,13 +33,13 @@ The groundtruth files: [<a href="groundtruthfiles/depth.txt">groundtruth</a>]
 </tr>
 </table>
 
-<h1>Description</h1>
+<h1><a id="dataset-description" class="anchor" href="#dataset-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Description</h1>
 <p align="center"><img src="DatasetDemo.png"></img></p>
 <p align="center">Figure 3: Human pose examples from the K2HPD dataset.</p>
 <br />
 
 <p>
-The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth images with various human poses under challenging scenarios. These detph images are captured by the kinect2 with the reolution 512x424. As illustrated in Fig. 2, this dataset consists of 19 body joints (see Fig. 3 for more details) of 30 subjects under ten different challenging scenes. The subject is asked to perform both normal daily poses and unusal poses. The human body joints are defined as follows: Head, Neck, UpperSpine, MiddleSpine, DownSpine, RightShoulder, RightElbow, RightWrist, RightHand, LeftShoulder,  LightElbow, LeftWrist, LeftHand, RightHip, RightKnee, RightFoot, LeftHip, LeftKnee, LeftFoot.
+The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth images with various human poses under challenging scenarios. These detph images are captured by the kinect2 with the reolution 512x424. K2HPD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses. As illustrated in Fig. 2, this dataset consists of 19 body joints (see Fig. 3 for more details) of 30 subjects under ten different challenging scenes. The subject is asked to perform both normal daily poses and unusal poses. The human body joints are defined as follows: Head, Neck, UpperSpine, MiddleSpine, DownSpine, RightShoulder, RightElbow, RightWrist, RightHand, LeftShoulder,  LightElbow, LeftWrist, LeftHand, RightHip, RightKnee, RightFoot, LeftHip, LeftKnee, LeftFoot. 
 </p>
 
 <p align="center"><img src="groundtruthfiles/mm4.png" height=200px></img></p>
@@ -57,29 +57,9 @@ To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fo
 </p>
 </blockquote>
 
+<p> To benefit the CNN based algorithm, we also provide the heat-map, which describes the likeli-hood of a joint occurring in each spatial location. Specially, it maps the location to a image that the value of this location is high. 
 <img src="heat-map.png"></img>
-<p> you can use our dataset to generate other groundtruth format such as heat-map, which describs the likeli-hood of a joint occurring in each spatial location. Specially, it maps the location to a image that the value of this location is high. This will be beneficial for image framework such as CNN.
-<img src="groundtruthfiles/mm8.png" >
 </p>
-
-
-
-<h1>
-<a id="dataset-description" class="anchor" href="#dataset-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Description</h1>
-
-<p>Our kinect2 human pose dataset(K2HPD) is composed about 100K depth images captured by kinect2 with resolution 512 x 424. We have 19 parts of human body and the order is :
- 
-
-
-
-<h1>
-  <a id="dataset-detail" class="anchor" href="#dataset-detail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>
-</h1>  
-<p>
-We transformed the depth value of the image to 0~255.K2HPD contains many different posees with different distances in many different scenes, including many challenging scenes and some unusual poses and occluded-poses. We offered the accurate groundtruth and we will tell you how we obtained the accurate groundtruth later 
-</p>
-
-
 
 <h1>
 <a id="dataset-details" class="anchor" href="#dataset-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Details</h1>
@@ -87,60 +67,8 @@ We transformed the depth value of the image to 0~255.K2HPD contains many differe
 <p>The dataset contains depth images captured by kinect2 with different people(boys and girls,about 30), different height,different distances and different challenging sceness(from simple scenes with only white wall to very challenging scenes which include many normal objects such as chairs). The dataset is aimed at detecting human poses, so many depthimages are human usual life poses.
 Besides, We captured many unusual poses and images with self-occlusion for the puspose of getting better detecting accuracy and generalization. You can see the appendix to know the poses our dataset  </p>
 
-
-
-<p>The following is some examples of our dataset:
-<!--<img src="datasetskeleton/00002550.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00002793.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00002999.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00003345.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00003368.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00003972.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00004056.png" alt="",style="left:50x;top:50px">-->
-<!--<img src="datasetskeleton/00004244.png" alt="">-->
-<!--<img src="datasetskeleton/00004430.png" alt="">-->
-<!--<img src="datasetskeleton/00004826.png" alt="">-->
-<!--<img src="datasetskeleton/00005104.png" alt="">-->
-<!--<img src="datasetskeleton/00006454.png" alt="">-->
-<!--<img src="datasetskeleton/00007389.png" alt="">-->
-<!--<img src="datasetskeleton/00007918.png" alt="">-->
-<!--<img src="datasetskeleton/00010250.png" alt="">-->
-<!--<img src="datasetskeleton/00010352.png" alt="">-->
-<!--<img src="datasetskeleton/00011249.png" alt="">-->
-<!--<img src="datasetskeleton/00011481.png" alt="">-->
-<!--<img src="datasetskeleton/00013244.png" alt="">-->
-<!--<img src="datasetskeleton/00013311.png" alt="">-->
-<!--<img src="datasetskeleton/00013358.png" alt="">-->
-<!--<img src="datasetskeleton/00014174.png" alt="">-->
-<!--<img src="datasetskeleton/00015344.png" alt="">-->
-<!--<img src="datasetskeleton/00021926.png" alt="">-->
-<!--<img src="datasetskeleton/00026835.png" alt="">-->
-<!--<img src="datasetskeleton/00042249.png" alt="">-->
-<!--<img src="datasetskeleton/00061083.png" alt="">-->
-<!--<img src="datasetskeleton/00061775.png" alt="">-->
-<!--<img src="datasetskeleton/00061784.png" alt="">-->
-<!--<img src="datasetskeleton/00062639.png" alt="">-->
-<!--<img src="datasetskeleton/00064502.png" alt="">-->
-<!--<img src="datasetskeleton/00066345.png" alt="">-->
-<!--<img src="datasetskeleton/00067293.png" alt="">-->
-<!--<img src="datasetskeleton/00067785.png" alt="">-->
-<!--<img src="datasetskeleton/00073329.png" alt="">-->
-<!--<img src="datasetskeleton/00086992.png" alt="">-->
-<!--<img src="datasetskeleton/00090665.png" alt="">-->
-<!--<img src="datasetskeleton/00090910.png" alt="">-->
-<!--<img src="datasetskeleton/00094126.png" alt="">-->
-<table stype="float:left">
-<tr><td><img src="datasetskeleton/00002550.png" style="width:200px"/>   </td><td><img src="datasetskeleton/00002793.png" style="width:200px"/></td><td><img src="datasetskeleton/00002999.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00003345.png" style="width:200px"/></td><td><img src="datasetskeleton/00003368.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00003972.png" style="width:200px"/></td><td><img src="datasetskeleton/00004056.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00004244.png" style="width:200px"/></td></tr>
-<tr><td><img src="datasetskeleton/00004430.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00004826.png" style="width:200px"/></td><td><img src="datasetskeleton/00005104.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00006454.png" style="width:200px"/></td><td><img src="datasetskeleton/00007389.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00007918.png" style="width:200px"/></td><td><img src="datasetskeleton/00010250.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00010352.png" style="width:200px"/></td></tr>
-<tr><td><img src="datasetskeleton/00011249.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00011481.png" style="width:200px"/></td><td><img src="datasetskeleton/00013244.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00013311.png" style="width:200px"/></td><td><img src="datasetskeleton/00013358.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00014174.png" style="width:200px"/></td><td><img src="datasetskeleton/00015344.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00021926.png" style="width:200px"/></td></tr>
-<tr><td><img src="datasetskeleton/00026835.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00042249.png" style="width:200px"/></td><td><img src="datasetskeleton/00061083.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00061775.png" style="width:200px"/></td><td><img src="datasetskeleton/00061784.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00062639.png" style="width:200px"/></td><td><img src="datasetskeleton/00064502.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00066345.png" style="width:200px"/></td></tr>
-<tr><td><img src="datasetskeleton/00067293.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00067785.png" style="width:200px"/></td><td><img src="datasetskeleton/00073329.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00086992.png" style="width:200px"/></td><td><img src="datasetskeleton/00090665.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00090910.png" style="width:200px"/></td><td><img src="datasetskeleton/00073329.png " style="width:200px"/>  </td><td><img src="datasetskeleton/00086992.png" style="width:200px"/></td></tr>
-<tr><td><img src="datasetskeleton/00094126.png " style="width:200px"/>  </td></tr>
-</table>
-</p>
-
 <p>The K2HPD dataset contains many human activies in usual life and some unusual posees in very challenging scenes. We captured theses depth images using kinect2 because kinect2 has a better depth image sensor compared to other similar devices such as kinect1 or xtion, which will be beneficial to learning both in accuracy and robustness. We use people to examine these depth images and for those  accuracy, we leave it as the groundtruth. for those not accurate, we only change the position of non-accurate part and leave others as kinect2 detected them. We used our own fast and  convenient java tools to adjust these joint positions, which can be very accurate with the location showing in each image(the joint will be shown when you put your mouse over it ,so you don't worry about confusing them. The location will show on the console windows so you can adjust the position at pixel level).<br>
-<img src="testimagesdemo/show.png" alt="the java tool for adjustment"></p>
+<img src="testimagesdemo/show.png" width=50% alt="the java tool for adjustment"></p>
 
 <h1>
 <a id="appendix" class="anchor" href="#dataset-appendix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Appendix</h1>
