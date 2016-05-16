@@ -16,28 +16,42 @@
     </section>
 
     <section class="main-content">
-<h1>
-<a id="dataset-download" class="anchor" href="#dataset-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Download</h1>
-<p>Below we will show some pictures of our dataset, but for more details of our dataset, you can download our part dataset demos or the full dataset.We split the full dataset to 2 parts: the first one is mainly normal poses and some unusual and self-occlusion, and the second includes many unusual poses and self-occlusion. When training and tesing using our dataset, you should use both the first and the second to get better results.  </p>
+<img src="dataset.png"></img>
+<h1><a id="dataset-download" class="anchor" href="#dataset-download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset Download</h1>
+<table>
+<tr>
+<td align="center">
+Demo images: [<a href="demoimages.zip">Demos</a>]
+</td>
+<td>
+The whole dataset images: [<a href="http://pan.baidu.com/s/1mitRWjI">K2HPD 1</a>], [<a href="http://pan.baidu.com/s/1bpeBofl">K2HPD 2</a>]
+</td>
+<td>
+The groundtruth files: [<a href="groundtruthfiles/depth.txt">groundtruth 1</a>] [<a href="groundtruthfiles/depth2.txt">groundtruth 2</a>]
+</td>
+</tr>
+</table>
 
-<p> the part dataset demos:
-[<a href="demoimages.zip">Demos</a>] </p>
-<p>The first part  dataset:
-[<a href="http://pan.baidu.com/s/1mitRWjI">K2HPD-1</a>] , with the groundth location file:[<a href="groundtruthfiles/depth.txt">K2HPD-1 groundtruth</a>]  </p>
-
-<p>The second part dataset:
-[<a href="http://pan.baidu.com/s/1bpeBofl">K2HPD-2</a>] ,  with the groundth location file:[<a href="groundtruthfiles/depth2.txt">K2HPD-2 groundtruth</a>] </p>
-<p>you can also use our part groundtruth files . we split these files to 5 average parts and you can use them partly in ways such as K-fold cross-validation.For example, you can use
-the first 4 part as the train images and the last part as the test images.
+<h1>Training and Testing Partition</h1>
+To make fair comparsion, we split the whole dataset to 5 subsets to perform 5-fold cross-validation.
 <blockquote>
-<p>1.[<a href="groundtruthfiles/depthpart1.txt">Train and Test Partition1</a>]<br>
-2.[<a href="groundtruthfiles/depthpart2.txt">Train and Test Partition2</a>]<br>
-3.[<a href="groundtruthfiles/depthpart3.txt">Train and Test Partition3</a>]<br>
-4.[<a href="groundtruthfiles/depthpart4.txt">Train and Test Partition4</a>]<br>  
-5.[<a href="groundtruthfiles/depthpart5.txt">Train and Test Partition5</a>]<br>  
+<p>
+1.[<a href="groundtruthfiles/depthpart1.txt">Train and Test Partition 1</a>]<br>
+2.[<a href="groundtruthfiles/depthpart2.txt">Train and Test Partition 2</a>]<br>
+3.[<a href="groundtruthfiles/depthpart3.txt">Train and Test Partition 3</a>]<br>
+4.[<a href="groundtruthfiles/depthpart4.txt">Train and Test Partition 4</a>]<br>  
+5.[<a href="groundtruthfiles/depthpart5.txt">Train and Test Partition 5</a>]<br>  
 </p>
 </blockquote>
 
+<img src="DatasetDemo.png"></img>
+<h2>Description</h2>
+The Kinect2 Human Pose Dataset (K2HPD) collected by us includes about 100K depth images with various human poses under challenging scenarios. These detph images are captured by the kinect2 with the reolution 512x424. 
+
+
+As illustrated in Fig. 2, this dataset consists of 19 body joints (see Fig. 3 for more details) of 30 subjects under ten different challenging scenes. The subject is asked to perform both normal daily poses and unusal poses. The human body joints are defined as follows: Head, Neck, UpperSpine, MiddleSpine, DownSpine, RightShoulder, RightElbow, RightWrist, RightHand, LeftShoulder,  LightElbow, LeftWrist, LeftHand, RightHip, RightKnee, RightFoot, LeftHip, LeftKnee, LeftFoot.
+
+<img src="heat-map.png"></img>
 <p> you can use our dataset to generate other groundtruth format such as heat-map, which describs the likeli-hood of a joint occurring in each spatial location.
 More mathetically, It maps the location to a image that the value of this location is high. This will be beneficial for image
 framework such as CNN  
